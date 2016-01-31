@@ -1,3 +1,10 @@
+function rTime(TotalSec) {
+		var g1day = 60 * 60 * 24;
+		var rTime = Math.floor(100000 * TotalSec / g1day) / 100;
+		return rTime;
+}
+
+
 function showClock() {
 
 		var gTime = new Date();
@@ -35,11 +42,6 @@ function showClock() {
 		document.getElementById("rTimeJST").innerHTML = rTimeJSTDisp;
 }
 
-function rTime(TotalSec) {
-		var g1day = 60 * 60 * 24;
-		var rTime = Math.floor(1000 * TotalSec / g1day) / 100;
-		return rTime;
-}
 
 
 setInterval('showClock()', 1000);
